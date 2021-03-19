@@ -1,3 +1,27 @@
+# routing-interop/route
+
+## Installation
+
+```shell
+$ composer require routing-interop/route
+```
+
+## Usage
+
+```php
+<?php
+
+use Interop\Routing\Route\RouteCollection;
+
+$routes = (new RouteCollection)
+    ->get('/blog',        [BlogController::class, 'index'])
+    ->get('/blog/{slug}', [BlogController::class, 'show'])
+    ->post('/blog',       [BlogController::class, 'create'])
+;
+```
+
+## Thougts
+
 - Most routing libraries use the following route declaration format:
 
       addRoute(<HTTP method>, <path>, <callable handler>)
