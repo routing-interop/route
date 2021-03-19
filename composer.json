@@ -1,0 +1,19 @@
+{
+  "name": "routing-interop/route-definition",
+  "description": "Abstract definition of a route",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Keven Godet",
+      "email": "hello@keven.fr"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Interop\\Routing\\RouteDefinition\\": "src"
+    }
+  }
+}
