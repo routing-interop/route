@@ -1,6 +1,6 @@
 <?php
 
-namespace Interop\Routing\RouteDefinition;
+namespace Interop\Routing\Route;
 
 interface RouteInterface
 {

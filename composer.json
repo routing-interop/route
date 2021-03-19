@@ -1,5 +1,5 @@
 {
-  "name": "routing-interop/route-definition",
+  "name": "routing-interop/route",
   "description": "Abstract definition of a route",
   "license": "MIT",
   "authors": [
@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Interop\\Routing\\RouteDefinition\\": "src"
+      "Interop\\Routing\\Route\\": "Route"
     }
   }
 }
