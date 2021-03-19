@@ -7,13 +7,15 @@ final class Route implements RouteInterface
     private PathInterface $path;
     private array $methods;
     private $handler;
+    private ?string $name;
     private ?RequirementsInterface $requirements;
 
-    public function __construct(array $methods, PathInterface $path, $handler, ?RequirementsInterface $requirements = null)
+    public function __construct(array $methods, PathInterface $path, $handler, ?string $name = null, ?RequirementsInterface $requirements = null)
     {
         $this->methods = $methods;
         $this->path = $path;
         $this->handler = $handler;
+        $this->name = $name;
         $this->requirements = $requirements;
     }
 
@@ -30,6 +32,11 @@ final class Route implements RouteInterface
     public function getHandler()
     {
         return $this->handler;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
     }
 
     public function getRequirements(): ?RequirementsInterface

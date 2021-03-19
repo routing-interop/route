@@ -13,4 +13,5 @@ interface RouteInterface
      */
     public function getHandler();
     public function getRequirements(): ?RequirementsInterface;
+    public function getName(): ?string;
 }
