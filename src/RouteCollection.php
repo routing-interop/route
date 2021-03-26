@@ -2,7 +2,7 @@
 
 namespace Interop\Routing\Route;
 
-final class RouteCollection
+class RouteCollection
 {
     private array $routes;
 
