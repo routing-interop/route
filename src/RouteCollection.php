@@ -2,7 +2,10 @@
 
 namespace Interop\Routing\Route;
 
-class RouteCollection
+use ArrayIterator;
+use IteratorAggregate;
+
+class RouteCollection implements IteratorAggregate
 {
     private array $routes;
 
@@ -53,5 +56,11 @@ class RouteCollection
     public function getRoutes(): array
     {
         return $this->routes;
+    }
+
+    /** @return Route[] */
+    public function getIterator()
+    {
+        return new ArrayIterator($this->routes);
     }
 }
